@@ -1,0 +1,51 @@
+# Java build files
+*.class
+*.jar
+*.war
+*.ear
+ 
+# Eclipse IDE files
+.project
+.classpath
+.settings/
+ 
+# IntelliJ IDEA files
+.idea/
+*.iml
+ 
+# Maven dependencies
+target/
+*.log
+ 
+# Gradle dependencies
+.gradle/
+build/
+ 
+# Selenium WebDriver files (logs, browser profiles, etc.)
+*.log
+*.crash
+*.bak
+ 
+# MacOS files
+.DS_Store
+ 
+# Windows files
+Thumbs.db
+ 
+# Environment files
+.env
+ 
+# Java bytecode and other temp files
+*.swp
+*.swo
+*.bak
+ 
+# Test reports and generated files
+test-output/
+ 
+# Selenium browser driver binaries (example: chromedriver)
+chromedriver*
+geckodriver*
+msedgedriver*
+
+has context menu
