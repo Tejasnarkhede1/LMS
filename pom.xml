@@ -1,84 +1,178 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
- 
-
   <modelVersion>4.0.0</modelVersion>
   <groupId>CBS_LMS</groupId>
   <artifactId>CBS_LMS</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+  <dependencies>
+    <!-- Selenium for web automation -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>3.141.59</version>
+    </dependency>
 
-<dependencies>
-	  
-	<dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-java</artifactId>
-	    <version>3.141.59</version>
-	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-	<dependency>
-		<groupId>org.testng</groupId>
-	    <artifactId>testng</artifactId>
-	    <version>7.7.1</version>
-	    <scope>test</scope>
+    <!-- TestNG for testing -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.7.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Apache POI for Excel file manipulation -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>5.2.3</version> <!-- Chose the latest version -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>5.2.3</version> <!-- Chose the latest version -->
+    </dependency>
+
+    <!-- Commons IO utilities -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.14.0</version>
+    </dependency>
+
+    <!-- WebDriver Manager for automatic driver setup -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.8.0</version>
+    </dependency>
+
+    <!-- ExtentReports for advanced test reporting -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version> <!-- Use latest version -->
+    </dependency>
+
+
+    <!-- Scribe Java APIs for OAuth integration -->
+    <dependency>
+      <groupId>com.github.scribejava</groupId>
+      <artifactId>scribejava-apis</artifactId>
+      <version>8.3.1</version>
+      <scope>runtime</scope>
     </dependency>
     
     <dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>5.2.3</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-	<dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi-ooxml</artifactId>
-	    <version>5.2.3</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-	<dependency>
-	    <groupId>commons-io</groupId>
-	    <artifactId>commons-io</artifactId>
-	    <version>2.14.0</version>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>json-schema-validator</artifactId>
+      <version>5.5.1</version>
+      <scope>test</scope>
 	</dependency>
 	
+	
+    <!-- JSON processing library -->
     <dependency>
-        <groupId>io.github.bonigarcia</groupId>
-        <artifactId>webdrivermanager</artifactId>
-        <version>5.8.0</version> <!-- Use the latest version available -->
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20240303</version>
     </dependency>
     
-    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-	<dependency>
-	    <groupId>com.aventstack</groupId>
-	    <artifactId>extentreports</artifactId>
-	    <version>4.0.0</version>
+    <dependency>
+    <groupId>xml-apis</groupId>
+    <artifactId>xml-apis</artifactId>
+    <version>1.4.01</version>
 	</dependency>
-	
+
+    <dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest</artifactId>
+    <version>2.2</version> <!-- Latest version of Hamcrest -->
+    </dependency>	
+    
+    <dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.1.1</version> <!-- Latest version -->
+    <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.20.0</version>
+	</dependency>
 	<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.20.0</version>
+	</dependency>
+    
+    
+    
+    <!-- ExtentReports Core Dependency -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version> <!-- Check for latest version -->
+</dependency>
+
+<!-- Optional: Gson for JSON processing -->
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.10.1</version>
+</dependency>
+
+    
+    
+    
+    
+    <dependency>
         <groupId>com.aventstack</groupId>
         <artifactId>extentreports</artifactId>
-        <version>5.0.9</version>
+        <version>5.0.9</version> <!-- Check for the latest version -->
     </dependency>
     
     <dependency>
-	      <groupId>org.apache.poi</groupId>
-	      <artifactId>poi</artifactId>
-	      <version>4.1.2</version>
-    </dependency>
-
-
-    <dependency>
-         <groupId>org.apache.poi</groupId>
-        <artifactId>poi-ooxml</artifactId>
-        <version>4.1.2</version>
+    <groupId>javax.mail</groupId>
+        <artifactId>javax.mail-api</artifactId>
+        <version>1.6.2</version> <!-- Check for the latest version -->
     </dependency>
     
+        <!-- Extent Reports -->
     <dependency>
         <groupId>com.aventstack</groupId>
         <artifactId>extentreports</artifactId>
-        <version>5.0.9</version> <!-- Use the latest version if needed -->
+        <version>5.1.1</version> <!-- Use the latest version -->
     </dependency>
 
-</dependencies>
+    <!-- Jakarta Mail API (for sending emails) -->
+    <dependency>
+        <groupId>jakarta.mail</groupId>
+        <artifactId>jakarta.mail-api</artifactId>
+        <version>2.1.2</version>
+    </dependency>
+    
+    <!-- Angus Mail (Implementation of Jakarta Mail) -->
+    <dependency>
+        <groupId>org.eclipse.angus</groupId>
+        <artifactId>angus-mail</artifactId>
+        <version>2.0.2</version>
+    </dependency>
 
+    <!-- Log4j (already in your project) -->
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.20.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.20.0</version>
+    </dependency>
+
+
+  </dependencies>
 </project>
